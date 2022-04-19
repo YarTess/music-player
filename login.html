@@ -150,7 +150,6 @@ body {
            <strong style="color:white">Bears</strong></a></h1>
            <div class="collapse navbar-collapse" style="color:white">
                <a href="main.html" class="btn btn-outline-light mt-2 mx-1">HOME</a>
-               <a class="btn btn-outline-light mt-2 mx-1">ALL SONGS</a>
                <!-- <a class="btn btn-outline-light mt-2 mx-1">LIKED SONGS</a>
                <a class="btn btn-outline-light mt-2 mx-1">RANDOM SONG</a>
                <div class="btn-group mt-2 mx-1">
@@ -169,8 +168,8 @@ body {
        <div class="collapse navbar-collapse justify-content-end" id="navbar">
        <!-- <h5 class="text-white mt-3 mx-2">Hi, User</h5>
        <a href="main.html" class="btn btn-light mt-2 mx-2"> Sign Out <i class="fa fa-sign-out" aria-hidden="true"></i></a> -->
-         <a href="login.html" class="btn btn-light mt-2 mx-2"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign In</a>
-         <a href="signup.html" class="btn btn-light mt-2 mx-2"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a>
+         <a href="{% url 'login' %}" class="btn btn-light mt-2 mx-2"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign In</a>
+         <a href="{% url 'signup' %}" class="btn btn-light mt-2 mx-2"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a>
        </div>
        <div class="content">
            <div class="lyrics"></div>
@@ -197,8 +196,7 @@ body {
       </a>
       <div class="or-seperator"><i>or</i></div>
         <form method="post">
-          <input type="hidden" name="csrfmiddlewaretoken" value="eluIgCO7AIfBNFK7HBwBVQg7SZWUoRsbnBQ2K6UFLUc6FEzolMdrHZzF3OSLmTHI">
-
+            {% csrf_token %}
 
             <div id="div_id_username" class="form-group"> <label for="id_username" class=" requiredField">
               Username<span class="asteriskField">*</span> </label>
