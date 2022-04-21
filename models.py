@@ -8,8 +8,18 @@ class Song(models.Model):
     Genre_Choice = (
             ('Pop', 'Pop'),
             ('Rock', 'Rock'),
-
+            ('Blues', 'Blues'),
+            ('Vocal', 'Vocal'),
+            ('Gospel', 'Gospel'),
+            ('Jazz', 'Jazz'),
+            ('Country', 'Country'),
+            ('Classical music', 'Classical music'),
+            ('Musical', 'Musical'),
+            ('Pop', 'Pop'),
+            ('Hip Hop', 'Hip Hop'),
+            ('Chanson', 'Chanson')
           )
+
 
     name = models.CharField(max_length=200)
     album = models.CharField(max_length=200)
