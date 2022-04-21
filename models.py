@@ -63,6 +63,7 @@ class Album(models.Model):
     album_title = models.CharField(max_length=50)
     genre = models.CharField(max_length=50)
     released_year = models.IntegerField()
+    song = models.ForeignKey(Song, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.album_title + '-' + self.artist
